@@ -9,7 +9,7 @@ from langchain.callbacks import get_openai_callback
 import pdfplumber
 
 
-def main():
+def streamlit_app():
   load_dotenv()
   st.set_page_config(page_title="Domain Knowledge Base in PDF")
   st.header("Domain Knowledge Base in PDF💬")
@@ -47,7 +47,6 @@ def main():
         print(cb)
           
       st.write(response)
-      return st.beta_streamlit_app()
 
 if __name__ == '__main__':
-    main()
+    streamlit_app()
