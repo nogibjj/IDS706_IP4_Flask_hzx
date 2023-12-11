@@ -15,9 +15,18 @@ COPY . .
 
 RUN pip3 install -r requirements.txt
 
-EXPOSE 8000
+EXPOSE 5000
+EXPOSE 8501
 
 # ENV PORT=80
 
-CMD ["python", "service/app.py"]
-# ENTRYPOINT ["streamlit", "run", "service/langchain_PDF.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# "--host=0.0.0.0"
+# ENTRYPOINT ["streamlit", "run", "service/langchain_PDF.py", "--server.port=5000", "--server.address=0.0.0.0"]
+
+# CMD ["python", "service/app.py"]
+RUN echo 'python service/app.py &' >> /entrypoint.sh && \
+    echo 'streamlit run service/langchain_PDF.py --server.port=5000 --server.address=0.0.0.0' >> /entrypoint.sh && \
+    chmod +x /entrypoint.sh
+
+# 设置 ENTRYPOINT 执行脚本文件
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
