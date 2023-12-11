@@ -72,6 +72,9 @@ docker push 0xhzx/ids706:latest
 - Azure Configuration: We should set environment variable `WEBSITES_PORT`, which is used to specify the port number on which your application should listen. When you deploy your application to Azure App Service and configure the port number using this environment variable, Azure App Service will forward traffic to the specified port. When you access a website on Azure App Service, it's typically accessed using HTTP (port 80) or HTTPS (port 443). However, if your application listens on a port number different from the default ports, such as 5000, within a Docker container, you need to inform Azure App Service to forward traffic to that specific port by setting the `WEBSITES_PORT` environment variable.
 
 
-
-
 ![Alt text](image-1.png)
+
+## Conclusion
+The LangChain ChatGPT PDF Knowledge Base project combines the power of ChatGPT with PDF document processing to create an interactive and intelligent system for knowledge retrieval. By leveraging natural language queries and document extraction techniques, users can easily access information from PDF documents in a conversational manner. This project opens up possibilities for building sophisticated conversational agents that can assist users in various domains requiring PDF document knowledge access.
+
+
