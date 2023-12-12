@@ -2,6 +2,9 @@
 
 # IDS706 Individual Project 4: Auto Scaling Flask App Using Any Platform As a Service
 
+## Video link
+https://youtu.be/wVP6DpcdGYA
+
 ## Requirements
 For this assignment, you will build a publicly accessible auto-scaling container using Azure App Services and Flask. This is an easy way to build and deploy a scaleable web-hosted app and will allow you to apply your Flask knowledge from previous lessons.
 
